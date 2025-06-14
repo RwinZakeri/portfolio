@@ -1,5 +1,5 @@
 import Header from "@/layout/header/header";
-import { Inter } from "next/font/google";
+import { Calistoga, Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 
@@ -9,12 +9,12 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-// const calistoga = Calistoga({
-//   subsets: ["latin"],
-//   display: "swap",
-//   weight: ["400"],
-//   variable: "--font-serif",
-// });
+const calistoga = Calistoga({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-serif",
+});
 
 export default function RootLayout({
   children,
@@ -26,7 +26,8 @@ export default function RootLayout({
       lang="en"
       className={twMerge(
         inter.className,
-        "bg-gray-900 text-white antialiased font-serif"
+        calistoga.className,
+        "bg-gray-900 text-white antialiased"
       )}
     >
       <Header />

@@ -51,14 +51,14 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       <div className="container mx-auto">
         <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300  to-sky-400 text-transparent bg-clip-text text-center">
+          <p className="uppercase font-sans font-semibold tracking-widest bg-gradient-to-r from-emerald-300  to-sky-400 text-transparent bg-clip-text text-center text-lg">
             Real-world Results
           </p>
         </div>
-        <h2 className="font-serif text-3xl text-center mt-6 md:text-3xl font-bold">
+        <h2 className="font-serif text-3xl text-center mt-6  font-extrabold md:text-5xl">
           Feature Projects
         </h2>
-        <p className="mt-4 text-white/60 max-w-md mx-auto text-center">
+        <p className="mt-4 font-sans font-semibold text-white/60 max-w-md mx-auto text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem ratione excepturi assumenda enim cumque
         </p>
@@ -91,10 +91,10 @@ export const ProjectsSection = () => {
                   {project.results.map((result) => (
                     <li
                       key={result.title}
-                      className="flex gap-2 text-sm text-white/50"
+                      className="flex gap-2 font-sans font-semibold text-sm text-white/50"
                     >
                       <Image
-                        className="w-5 md:w-6"
+                        className="w-6 md:w-6"
                         src={CheckIcon}
                         alt="CheckIcon"
                       />
@@ -103,14 +103,14 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
                 <a href={project.link}>
-                  <button className="flex items-center justify-center gap-2 bg-white text-gray-950 h-12 w-full rounded-xl font-semibold mt-8 md:w-fit md:px-3">
+                  <button className="flex  items-center justify-center gap-2 bg-white text-gray-950 h-12 w-full rounded-xl font-sans font-semibold mt-8 md:w-fit md:px-3">
                     <span>View Live Site</span>
                     <Image className="w-5" src={ArrowUp} alt="CheckIcon" />
                   </button>
                 </a>
               </div>
               <Image
-                className="mt-8 -mb-4"
+                className="mt-8 -mb-4 lg:w-1/2 lg:relative lg:left-20"
                 src={project.image}
                 alt={project.title}
               />

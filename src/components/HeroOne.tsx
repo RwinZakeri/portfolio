@@ -117,7 +117,7 @@ const HeroOne = () => {
             <h1 className="font-serif md:font-bold md:text-5xl text-3xl text-center mt-8">
               Building Exceptional User Experiences
             </h1>
-            <p className="text-center mt-4 text-white/60">
+            <p className="text-center mt-4 font-sans font-semibold text-white/60">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
               atque iusto nihil earum voluptas animi itaque consectetur,
               quisquam magni
