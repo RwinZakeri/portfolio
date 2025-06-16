@@ -2,10 +2,11 @@ import ArrowUp from "@/assets/icons/arrow-up-right.svg";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import grainImage from "@/assets/images/grain.jpg";
 
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import Image from "next/image";
+import Card from "./Card";
+import SectionHeader from "./SectionHeader";
 
 const portfolioProjects = [
   {
@@ -50,30 +51,15 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container mx-auto">
-        <div className="flex justify-center">
-          <p className="uppercase font-sans font-semibold tracking-widest bg-gradient-to-r from-emerald-300  to-sky-400 text-transparent bg-clip-text text-center text-lg">
-            Real-world Results
-          </p>
-        </div>
-        <h2 className="font-serif text-3xl text-center mt-6  font-extrabold md:text-5xl">
-          Feature Projects
-        </h2>
-        <p className="mt-4 font-sans font-semibold text-white/60 max-w-md mx-auto text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem ratione excepturi assumenda enim cumque
-        </p>
+        <SectionHeader
+          detail="www"
+          title="Real-world Results"
+          desc="Feature Projects"
+        />
         <div className="flex flex-col mt-10 justify-center w-full gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
-            <div
-              key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2  after:outline-white/20 after:-outline-offset-2 after:rounded-3xl px-8 pt-8 lg:flex justify-between lg:gap-4"
-            >
+            <Card key={project.title}>
               <div>
-                <div
-                  className="absolute inset-0 -z-10 opacity-5 bg-red-300"
-                  style={{ backgroundImage: `url(${grainImage.src})` }}
-                ></div>
-
                 <div>
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text ">
                     <span>
@@ -114,7 +100,7 @@ export const ProjectsSection = () => {
                 src={project.image}
                 alt={project.title}
               />
-            </div>
+            </Card>
           ))}
         </div>
       </div>
