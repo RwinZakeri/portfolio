@@ -6,7 +6,7 @@ const HeroOrbit = ({
   rotate,
 }: PropsWithChildren<{ size: number; rotate: number }>) => {
   return (
-    <div className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-spin [animation-duration:15s]">
       <div
         className=""
         style={{
@@ -16,7 +16,7 @@ const HeroOrbit = ({
         }}
       >
         <div
-          className="  inline-flex"
+          className="inline-flex animate-spin [animation-duration:10s]"
           style={{
             transform: `rotate(${rotate * -1}deg)`,
           }}

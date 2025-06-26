@@ -1,3 +1,5 @@
+import "../app/globals.css";
+
 import grainImage from "@/assets/images/grain.jpg";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
@@ -41,43 +43,55 @@ const cardData = [
 ];
 
 const TestimonialSection = () => {
+  const duplicatedData = [...cardData, ...cardData];
+
   return (
-    <div className="py-24">
+    <section
+      className="py-24"
+      aria-label="Client Testimonials and Reviews"
+      id="testimonials"
+    >
       <SectionHeader
         title="Happy Clients"
-        desc="What Clients Say about Me"
-        detail="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. "
+        desc="What People Say About My Work"
+        detail="Real feedback from product managers, CEOs, and designers I've worked with. Building modern, scalable web experiences that deliver results."
       />
-      <div className=" mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex gap-8 flex-none">
-          {cardData.map((item) => (
-            <div
-              key={item.name}
-              className=" bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2  after:outline-white/20 after:-outline-offset-2 after:rounded-3xl p-4 lg:flex flex-col  justify-between max-w-xs md:max-w-md md:p-8"
+
+      <div className="mt-16 lg:mt-24 marquee-wrapper">
+        <div className="marquee-track gap-6">
+          {duplicatedData.map((item, index) => (
+            <article
+              key={`${item.name}-${index}`}
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline-white/20 after:-outline-offset-2 after:rounded-3xl p-4 lg:flex flex-col justify-between w-80 md:p-8 flex-shrink-0"
+              aria-label={`Testimonial from ${item.name}, ${item.position}`}
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5 bg-red-300"
                 style={{ backgroundImage: `url(${grainImage.src})` }}
-              ></div>
-              <div className="flex items-center gap-2 ">
+              />
+
+              <div className="flex items-center gap-2">
                 <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
                   <Image
                     src={item.avatar}
-                    alt={item.name}
+                    alt={`${item.name}, ${item.position}`}
                     className="max-h-full"
                   />
                 </div>
                 <div>
-                  <div>{item.name}</div>
+                  <div className="font-semibold text-white">{item.name}</div>
                   <div className="text-sm text-white/40">{item.position}</div>
                 </div>
               </div>
-              <div className="mt-2 text-sm md:text-base ">{item.text}</div>
-            </div>
+
+              <blockquote className="mt-2 text-sm md:text-base text-wrap text-white/80">
+                “{item.text}”
+              </blockquote>
+            </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,6 +10,27 @@
   --breakpoint-lg: 1200px;
 }
 
+@theme {
+  --animation-ping-large: ping-large 10s ease-in-out infinite;
+
+  @keyframes ping-large {
+    75%,
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 @layer components {
   .navItem {
     @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-medium font-sans hover:bg-white/10 transition duration-300;
@@ -27,4 +48,67 @@
   .container {
     @apply lg:max-w-5xl;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: scroll-marquee 40s linear infinite;
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+html {
+  scroll-behavior: smooth;
 }
