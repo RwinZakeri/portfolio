@@ -48,6 +48,19 @@
   .container {
     @apply lg:max-w-5xl;
   }
+
+  .animate-vertical-scroll {
+    animation: scroll-vertical 12s linear infinite;
+  }
+
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .swiper {

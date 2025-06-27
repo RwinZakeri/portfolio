@@ -1,4 +1,4 @@
-import Star from "@/assets/icons/star.svg";
+import { StarIcon } from "@/assets/icons/StarIcon";
 import grainImage from "@/assets/images/grain.jpg";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import HeroOrbit from "@/components/HeroOrbit";
@@ -22,79 +22,43 @@ const HeroOne = () => {
 
         {/* Orbit Star Decorations */}
         <HeroOrbit size={800} rotate={-72}>
-          <Image className="size-28" src={Star} alt="Decorative star" />
+          <StarIcon className="size-28" />
         </HeroOrbit>
         <HeroOrbit size={550} rotate={20}>
-          <Image className="size-12" src={Star} alt="Decorative star" />
+          <StarIcon className="size-12" />
         </HeroOrbit>
         <HeroOrbit size={590} rotate={98}>
-          <Image className="size-8" src={Star} alt="Decorative star" />
+          <StarIcon className="size-8" />
         </HeroOrbit>
         <HeroOrbit size={430} rotate={98}>
-          <Image className="size-8" src={Star} alt="Decorative star" />
+          <StarIcon className="size-8" />
         </HeroOrbit>
         <HeroOrbit size={430} rotate={-14}>
-          <Image
-            className="size-8 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-8 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={440} rotate={90}>
-          <Image
-            className="size-5 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-5 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={530} rotate={178}>
-          <Image
-            className="size-8 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-8 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={530} rotate={144}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={720} rotate={0}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={720} rotate={90}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={720} rotate={180}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={720} rotate={-90}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
         <HeroOrbit size={650} rotate={27}>
-          <Image
-            className="size-14 opacity-50"
-            src={Star}
-            alt="Decorative star"
-          />
+          <StarIcon className="size-14 opacity-50" />
         </HeroOrbit>
 
         {/* Content Section */}
@@ -121,13 +85,16 @@ const HeroOne = () => {
               React Developer Crafting Smooth, Scalable Interfaces
             </h1>
             <p className="text-center mt-4 font-sans font-semibold text-white/60">
-              I’m a frontend developer specializing in JavaScript, React, and
+              I’m arvin zakeri a frontend developer specializing in JavaScript, React, and
               UI/UX. I turn complex problems into elegant code and fast user
               interfaces.
             </p>
 
             <div className="flex flex-col mt-8 gap-4 md:flex-row items-center justify-center mx-auto">
-              <Link href={"./#project"} className="w-fit inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-gray-700">
+              <Link
+                href={"./#project"}
+                className="w-fit inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-gray-700"
+              >
                 <span>Explore My Projects</span>
                 <FaArrowDown className="text-white" />
               </Link>

@@ -19,45 +19,61 @@ const calistoga = Calistoga({
 
 export const metadata = {
   title: {
-    default: "Rwin – Frontend React Developer",
-    template: "%s | Rwin Portfolio",
+    default: "Arvin Zakeri – Frontend React Developer",
+    template: "%s | Arvin Zakeri – React & Frontend Engineer",
   },
   description:
-    "I'm Rwin, a passionate frontend developer specializing in JavaScript, React, Next.js, and modern UI/UX. I craft high-performance, accessible, and beautiful web interfaces.",
-  metadataBase: new URL("https://rwin.dev"), // Change to your real domain
+    "Arvin Zakeri is a professional frontend developer specializing in React, JavaScript, and Next.js. He builds fast, responsive, and accessible websites with top-notch UI/UX.",
+  metadataBase: new URL("https://rwin.dev"), // Make sure your domain is live!
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   keywords: [
-    "Rwin",
+    "Arvin Zakeri",
     "Frontend Developer",
     "React Developer",
-    "JavaScript Developer",
-    "Next.js Developer",
-    "UI Developer",
-    "UX Engineer",
-    "Frontend Portfolio",
-    "Modern Web Design",
+    "JavaScript Engineer",
+    "Next.js Expert",
+    "UI/UX Specialist",
     "Web Performance",
+    "Modern Web Developer",
+    "Tailwind CSS Developer",
+    "Frontend Portfolio",
+    "Frontend Interview Prep",
+    "React Projects",
+    "Clean Code",
+    "Responsive Web Design",
+    "SEO-Friendly Websites",
+    "Accessible Frontend",
+    "Arvin Zakeri Portfolio",
+    "Hire Arvin Zakeri",
+    "Frontend Developer Germany",
   ],
+  authors: [{ name: "Arvin Zakeri", url: "https://rwin.dev" }],
+  creator: "Arvin Zakeri",
+  publisher: "Arvin Zakeri",
   robots: {
     index: true,
     follow: true,
     nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   openGraph: {
-    title: "Rwin – Frontend React Developer",
+    title: "Arvin Zakeri – Frontend React Developer",
     description:
-      "Explore Rwin's portfolio of JavaScript, React, and Next.js projects. Focused on performance, design, and clean code.",
+      "Explore Arvin Zakeri's portfolio of modern frontend projects built with React, JavaScript, and Next.js. Focused on performance, design, and clean code.",
     url: "https://rwin.dev",
-    siteName: "Rwin Portfolio",
+    siteName: "Arvin Zakeri Portfolio",
     images: [
       {
-        url: "https://rwin.dev/og-image.jpg", // Replace with your actual OG image
+        url: "https://rwin.dev/og-image.jpg", // Replace with real OG image
         width: 1200,
         height: 630,
-        alt: "Rwin – Frontend React Developer",
+        alt: "Arvin Zakeri – Frontend React Developer",
       },
     ],
     locale: "en_US",
@@ -65,11 +81,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rwin – Frontend React Developer",
+    title: "Arvin Zakeri – Frontend React Developer",
     description:
-      "High-impact JavaScript and React projects by Rwin. Check out his clean code, intuitive UI, and strong frontend skills.",
-    creator: "@rwin_dev", // Replace with your Twitter handle
-    images: ["https://rwin.dev/twitter-image.jpg"], // Replace with your actual Twitter image
+      "Discover high-quality React and JavaScript projects by Arvin Zakeri. Performance, clean code, and pixel-perfect UI/UX.",
+    creator: "@rwin_dev", // Replace with your Twitter/X handle
+    images: ["https://rwin.dev/twitter-image.jpg"], // Replace with real image
   },
 };
 

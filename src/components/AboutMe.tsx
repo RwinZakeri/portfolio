@@ -1,6 +1,6 @@
 import "../app/globals.css";
 
-import starIco from "@/assets/icons/star.svg";
+import { StarIcon } from "@/assets/icons/StarIcon";
 import bookImage from "@/assets/images/book-cover.png";
 import grainImage from "@/assets/images/grain.jpg";
 import mapImage from "@/assets/images/map.png";
@@ -41,7 +41,8 @@ export const BackgroundWrapper = ({
 export const SectionTitle = ({ title }: { title: string }) => (
   <div className="flex flex-col gap-2 mb-4">
     <div className="flex items-center gap-1">
-      <Image src={starIco} alt="Star icon" width={32} height={32} />
+      <StarIcon />
+
       <h2 className="text-xl font-semibold font-serif">{title}</h2>
     </div>
     <p className="mb-2 text-sm text-white/60">
